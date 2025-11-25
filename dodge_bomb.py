@@ -31,7 +31,7 @@ def gameover(screen: pg.Surface) -> None:
     txt = fonto.render("Game Over", True, (255,255,255))
     text_rect = txt.get_rect(center=(screen.get_width() // 2, screen.get_height() // 2))
     kokaton_img = pg.image.load("fig/8.png")
-    kokaton_left = kokaton_img.get_rect(center=(screen.get_width()//2 - 210, screen.get_height()//2))
+    kokaton_left = kokaton_img.get_rect(center=(screen.get_width()//2 - 220, screen.get_height()//2))
     kokaton_right = kokaton_img.get_rect(center=(screen.get_width()//2 + 220, screen.get_height()//2))
     go_img.blit(txt, text_rect)
     go_img.blit(kokaton_img, kokaton_left)
@@ -39,6 +39,8 @@ def gameover(screen: pg.Surface) -> None:
     screen.blit(go_img, (0, 0))
     pg.display.update()
     time.sleep(5)
+
+
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
